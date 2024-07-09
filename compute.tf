@@ -40,7 +40,7 @@ resource "aws_security_group" "sg-allow-allubuntu" {
     to_port = 22
     protocol = "tcp" #(transmission control protocol) (tcp any connection that involves ssh, https, http eg shaking hands)
                    #(udp playing games, waving hands from a distance) 
-    cidr_blocks = "0.0.0.0.0/0"               
+    cidr_blocks = ["0.0.0.0.0/0"]               
   }
 
   ingress {
@@ -48,7 +48,7 @@ resource "aws_security_group" "sg-allow-allubuntu" {
     to_port = 80
     protocol = "tcp" #(transmission control protocol) (tcp any connection that involves ssh, https, http eg shaking hands)
                    #(udp playing games, waving hands from a distance) 
-    cidr_blocks = "0.0.0.0.0/0"
+    cidr_blocks = ["0.0.0.0.0/0"]
   }
 
   ingress {
@@ -56,7 +56,7 @@ resource "aws_security_group" "sg-allow-allubuntu" {
     to_port = 443
     protocol = "tcp" #(transmission control protocol) (tcp any connection that involves ssh, https, http eg shaking hands)
                    #(udp playing games, waving hands from a distance) 
-    cidr_blocks = "0.0.0.0.0/0"               
+    cidr_blocks = ["0.0.0.0.0/0"]               
   }
 
   ingress {
@@ -64,14 +64,14 @@ resource "aws_security_group" "sg-allow-allubuntu" {
     to_port = 8080
     protocol = "tcp" #(transmission control protocol) (tcp any connection that involves ssh, https, http eg shaking hands)
                    #(udp playing games, waving hands from a distance) 
-    cidr_blocks = "0.0.0.0.0/0"               
+    cidr_blocks = ["0.0.0.0.0/0"]               
   }
 
   egress {
     from_port = 0
     to_port = 0
     protocol = "-1" #(all outgoing traffic)
-    cidr_blocks = "0.0.0.0.0/0"               
+    cidr_blocks = ["0.0.0.0.0/0"]               
   }
 }
 
